@@ -54,6 +54,15 @@
     margin-top: 60px; // Increased from 40px to 60px
   }
 
+  &__search {
+    position: relative;
+    width: 100%;
+    margin-top: -2rem;
+    z-index: 5;
+    padding: 0 2rem;
+    transform: translateY(-50%);
+  }
+
   &__title {
     font-size: 3.5rem;
     font-weight: 700;
