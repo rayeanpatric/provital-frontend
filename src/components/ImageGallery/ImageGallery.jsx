@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import ImageCard from "../ImageCard/ImageCard";
 import "./ImageGallery.scss";
 
-const ImageGallery = ({ items, currentIndex }) => {
+const ImageGallery = ({ items }) => {
   const containerRef = useRef(null);
   const [isMobileOrTablet, setIsMobileOrTablet] = useState(
     window.innerWidth <= 1024

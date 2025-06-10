@@ -8,14 +8,12 @@ import "./Hero.scss";
 const Hero = () => {
   const [screenSize, setScreenSize] = useState({
     isDesktop: window.innerWidth > 1024,
-    isTablet: window.innerWidth <= 1024 && window.innerWidth >= 768,
   });
 
   useEffect(() => {
     const handleResize = () => {
       setScreenSize({
         isDesktop: window.innerWidth > 1024,
-        isTablet: window.innerWidth <= 1024 && window.innerWidth >= 768,
       });
     };
 

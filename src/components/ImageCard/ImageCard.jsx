@@ -5,10 +5,12 @@ const ImageCard = ({ image, title, description, duration }) => {
   return (
     <div className="image-card" role="article">
       <div className="image-card__image-container">
+        {" "}
         <img
           src={image}
           alt={`${title} - ${description}`}
           className="image-card__image"
+          loading="lazy"
         />
         {duration && (
           <div

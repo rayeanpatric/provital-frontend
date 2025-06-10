@@ -68,10 +68,6 @@
   &--up .vertical-carousel__track {
     animation: scrollUp 25s linear infinite; // Adjusted timing
   }
-
-  &:hover .vertical-carousel__track {
-    animation-play-state: running;
-  }
 }
 
 @keyframes scrollDown {
