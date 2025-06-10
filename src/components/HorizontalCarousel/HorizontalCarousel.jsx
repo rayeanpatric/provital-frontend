@@ -1,15 +1,16 @@
 import React from "react";
 import "./HorizontalCarousel.scss";
+import { allImages } from "../VerticalCarousel/carouselData";
 
-const HorizontalCarousel = ({ images = [] }) => {
+const HorizontalCarousel = () => {
   // Duplicate images array for infinite scroll
-  const allImages = [...images, ...images];
+  const duplicatedImages = [...allImages, ...allImages];
 
   return (
     <div className="horizontal-carousel">
       <div className="horizontal-carousel__container">
         <div className="horizontal-carousel__track">
-          {allImages.map((image, index) => (
+          {duplicatedImages.map((image, index) => (
             <div
               key={`${image.src}-${index}`}
               className="horizontal-carousel__item"

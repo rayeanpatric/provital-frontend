@@ -5,24 +5,27 @@
   width: 140%;
   height: 120px;
   left: -20%;
-  top: 65%;
+  top: 80%; // Moved lower from 65% to 80%
   background: linear-gradient(90deg, #ffd700 0%, #ffb347 50%, #ff7b82 100%);
-  transform: rotate(-4deg);
-  z-index: 0;
-  opacity: 0.85;
+  transform: rotate(-4deg) scale(1.2); // Added scale for more presence
+  z-index: 3; // Increased from 1 to put it above carousel but below search (z-index: 5)
+  opacity: 1;
   border-radius: 100px;
+  pointer-events: none;
 
   @include md {
     width: 160%;
     left: -30%;
-    top: 60%;
+    top: 75%; // Adjusted for medium screens
     height: 80px;
+    transform: rotate(-4deg) scale(1.1);
   }
 
   @include sm {
     width: 180%;
     left: -40%;
-    top: 55%;
+    top: 70%; // Adjusted for small screens
     height: 60px;
+    transform: rotate(-4deg);
   }
 }

@@ -1,7 +1,10 @@
 import React from "react";
 import "./VerticalCarousel.scss";
+import { carousel1Images, carousel2Images } from "./carouselData";
 
-const VerticalCarousel = ({ images = [], direction = "down" }) => {
+const VerticalCarousel = ({ direction = "down" }) => {
+  const images = direction === "down" ? carousel1Images : carousel2Images;
+
   if (!images || images.length === 0) {
     console.warn("No images provided to VerticalCarousel");
     return null;
@@ -24,11 +27,6 @@ const VerticalCarousel = ({ images = [], direction = "down" }) => {
                   alt={image.alt}
                   className="vertical-carousel__image"
                   loading={index > 3 ? "lazy" : "eager"}
-                  onError={(e) => {
-                    console.error(`Failed to load image: ${image.src}`);
-                    e.target.src =
-                      "https://via.placeholder.com/400x600?text=Medical+Care";
-                  }}
                 />
               </div>
             </div>
