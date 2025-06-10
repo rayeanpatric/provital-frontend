@@ -4,7 +4,7 @@
   position: relative;
   height: 100vh;
   min-height: 800px;
-  padding-top: 72px; // Header height
+  padding-top: 0;
   overflow: hidden;
 
   &__layout {
@@ -23,7 +23,7 @@
   &__carousels {
     display: flex;
     gap: 1rem;
-    height: calc(100vh - 72px);
+    height: 100vh;
     overflow: hidden;
   }
 
