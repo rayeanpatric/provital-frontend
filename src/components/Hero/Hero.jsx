@@ -2,6 +2,7 @@ import React from "react";
 import VerticalCarousel from "../VerticalCarousel/VerticalCarousel";
 import GradientBar from "../GradientBar/GradientBar";
 import HorizontalCarousel from "../HorizontalCarousel/HorizontalCarousel";
+import SearchSection from "../SearchSection/SearchSection";
 import "./Hero.scss";
 
 const Hero = () => {
@@ -28,6 +29,7 @@ const Hero = () => {
               Optimize your lifestyle and reverse chronic diseases.
             </p>
           </div>
+          <SearchSection />
         </div>
       </div>
       <GradientBar />
