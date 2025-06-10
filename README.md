@@ -1,27 +1,36 @@
 # ProVital Healthcare Platform
 
 ## Overview
+
 ProVital is a modern healthcare platform connecting patients with medical professionals while offering comprehensive wellness resources. This frontend implementation showcases a responsive, user-friendly interface built with React and modern web technologies.
 
 ## 🚀 Features
 
-### For Patients
-- **Healthcare Professional Search**
-  - Find doctors by specialty and location
-  - View detailed professional profiles
-  - Easy appointment booking system
+### Implemented Features
 
-### For Healthcare Providers
-- **Professional Profile Management**
-  - Custom practice listing
-  - Appointment management
-  - Professional credentials display
+- **Responsive Header**
 
-### Core Components
-- Responsive header with authentication
-- Interactive service carousels
-- Medical facility showcase
-- Educational health resources
+  - Desktop and mobile navigation
+  - Login/Signup functionality
+  - Hamburger menu for mobile view
+
+- **Interactive Carousels**
+
+  - Horizontal carousel for medical services
+  - Vertical carousel for healthcare facilities
+  - Smooth transitions and animations
+
+- **Lifestyle Pillars Section**
+
+  - Educational health cards
+  - Image galleries with descriptions
+  - Responsive grid layout
+
+- **UI Components**
+  - Hero section with search
+  - Gradient bars for visual appeal
+  - Image cards with descriptions
+  - Responsive footer
 - Mobile-optimized navigation
 
 ## 🛠 Technical Stack
@@ -34,25 +43,30 @@ ProVital is a modern healthcare platform connecting patients with medical profes
 - **Version Control:** Git
 
 ## 📁 Project Structure
+
 ```
 src/
 ├── components/
-│   ├── Header/          # Navigation & auth components
-│   ├── Carousels/       # Interactive carousel components
-│   ├── Auth/            # Authentication related components
-│   └── Common/          # Reusable UI components
+│   ├── Header/              # Navigation & auth components
+│   ├── Hero/               # Hero section with search
+│   ├── HorizontalCarousel/ # Medical services carousel
+│   ├── VerticalCarousel/   # Healthcare facilities carousel
+│   ├── LifestylePillars/   # Health education section
+│   ├── ImageCard/          # Reusable image card component
+│   ├── ImageGallery/       # Gallery component
+│   ├── GradientBar/        # Visual separator component
+│   ├── SearchSection/      # Search functionality
+│   └── Footer/             # Site footer
 ├── styles/
-│   ├── variables.scss   # Global SCSS variables
-│   ├── mixins.scss     # SCSS mixins
-│   └── global.scss     # Global styles
-└── assets/
-    ├── images/         # Image assets
-    └── icons/          # Icon assets
+│   ├── App.scss           # App-level styles
+│   └── variables.scss     # Global SCSS variables
+└── components/images/     # Image assets for all components
 ```
 
 ## 🚦 Getting Started
 
 ### Prerequisites
+
 - Node.js (v14.0.0 or higher)
 - npm (v6.0.0 or higher)
 
@@ -60,7 +74,7 @@ src/
 
 ```bash
 # Clone repository
-git clone https://github.com/your-username/provital-frontend.git
+git clone https://github.com/rayeanpatric/provital-frontend.git
 
 # Navigate to project directory
 cd provital-frontend
@@ -92,12 +106,14 @@ npm test
 ## 🔧 Configuration
 
 ### Environment Variables
+
 ```env
 REACT_APP_API_URL=your_api_url
 REACT_APP_ENV=development
 ```
 
 ### Browser Support
+
 - Chrome (latest 2 versions)
 - Firefox (latest 2 versions)
 - Safari (latest 2 versions)
@@ -107,10 +123,10 @@ REACT_APP_ENV=development
 
 ```scss
 $breakpoints: (
-  'mobile': 320px,
-  'tablet': 768px,
-  'desktop': 1024px,
-  'wide': 1440px
+  "mobile": 320px,
+  "tablet": 768px,
+  "desktop": 1024px,
+  "wide": 1440px,
 );
 ```
 
@@ -129,4 +145,3 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 ## 👥 Contact
 
 - Project Link: [https://github.com/rayeanpatric/provital-frontend](https://github.com/your-username/provital-frontend)
-- Deployed Link: [https://your-documentation-url.com](https://your-documentation-url.com)
