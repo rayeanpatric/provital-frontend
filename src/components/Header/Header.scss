@@ -1,0 +1,85 @@
+@use "../../styles/variables" as *;
+
+.header {
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: $spacing-md 0;
+    max-width: $container-max-width;
+    margin: 0 auto;
+  }
+
+  &__logo {
+    h1 {
+      font-size: $font-size-h3;
+      color: $primary-color;
+      margin: 0;
+    }
+
+    img {
+      height: 40px;
+      width: auto;
+      display: block;
+    }
+  }
+
+  &__nav {
+    ul {
+      display: flex;
+      list-style: none;
+      gap: $spacing-lg;
+      margin: 0;
+      padding: 0;
+
+      li {
+        a {
+          color: $text-color;
+          font-weight: 500;
+          transition: color 0.2s ease;
+
+          &:hover {
+            color: $primary-color;
+          }
+        }
+      }
+    }
+  }
+
+  &__auth {
+    display: flex;
+    gap: $spacing-md;
+
+    .btn-login {
+      padding: $spacing-sm $spacing-md;
+      color: $primary-color;
+      border: 1px solid $primary-color;
+      border-radius: $border-radius-sm;
+      transition: all 0.2s ease;
+
+      &:hover {
+        background-color: rgba($primary-color, 0.1);
+      }
+    }
+
+    .btn-signup {
+      padding: $spacing-sm $spacing-md;
+      color: $border-color;
+      background-color: $primary-color;
+      border-radius: $border-radius-sm;
+      transition: all 0.2s ease;
+
+      &:hover {
+        background-color: darken($primary-color, 10%);
+      }
+    }
+  }
+}

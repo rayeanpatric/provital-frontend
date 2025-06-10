@@ -1,0 +1,137 @@
+@use "./variables" as *;
+
+// Typography utility classes
+.text {
+  &-primary {
+    color: $text-primary;
+  }
+  &-secondary {
+    color: $text-secondary;
+  }
+  &-center {
+    text-align: center;
+  }
+  &-left {
+    text-align: left;
+  }
+  &-right {
+    text-align: right;
+  }
+}
+
+// Spacing utility classes
+.m {
+  &t {
+    margin-top: $spacing-md;
+  }
+  &b {
+    margin-bottom: $spacing-md;
+  }
+  &l {
+    margin-left: $spacing-md;
+  }
+  &r {
+    margin-right: $spacing-md;
+  }
+  &y {
+    margin: $spacing-md 0;
+  }
+  &x {
+    margin: 0 $spacing-md;
+  }
+}
+
+.p {
+  &t {
+    padding-top: $spacing-md;
+  }
+  &b {
+    padding-bottom: $spacing-md;
+  }
+  &l {
+    padding-left: $spacing-md;
+  }
+  &r {
+    padding-right: $spacing-md;
+  }
+  &y {
+    padding: $spacing-md 0;
+  }
+  &x {
+    padding: 0 $spacing-md;
+  }
+}
+
+// Flex utility classes
+.flex {
+  display: flex;
+
+  &-center {
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-between {
+    justify-content: space-between;
+  }
+
+  &-column {
+    flex-direction: column;
+  }
+}
+
+.app {
+  font-family: $font-family-primary;
+  color: $text-color;
+  background-color: transparent;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  main {
+    flex: 1;
+  }
+}
+
+.container {
+  max-width: $container-max-width;
+  margin: 0 auto;
+  padding: 0 $container-padding;
+}
+
+// Reset styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+// Accessibility utilities
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}

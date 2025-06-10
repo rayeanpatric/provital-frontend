@@ -1,0 +1,102 @@
+@use "../../styles/variables" as *;
+
+.search-section {
+  width: 100%;
+  margin: 2rem auto;
+  max-width: 900px;
+  z-index: 2;
+  position: relative;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: white;
+    padding: 1rem;
+    border-radius: 50px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  }
+
+  &__input-group {
+    flex: 1;
+    position: relative;
+
+    &:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      right: -0.375rem;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 24px;
+      width: 1px;
+      background-color: $border-color;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    padding: 0.875rem 1rem;
+    border: none;
+    font-size: 0.9375rem;
+    color: $text-primary;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      color: #94a3b8;
+    }
+  }
+
+  &__button {
+    padding: 0.875rem 2rem;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #34d399 0%, #3b82f6 100%);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+
+    &:hover {
+      transform: translateY(-1px);
+    }
+  }
+
+  @include sm {
+    margin: 1.5rem auto;
+
+    &__container {
+      flex-direction: column;
+      padding: 0.75rem;
+    }
+
+    &__input-group {
+      width: 100%;
+    }
+
+    &__button {
+      width: 100%;
+    }
+  }
+}
+
+// Media queries
+@include md {
+  .search-section {
+    &__container {
+      flex-direction: column;
+      gap: 0.5rem;
+      padding: 0.75rem;
+    }
+
+    &__input-group {
+      width: 100%;
+    }
+
+    &__button {
+      width: 100%;
+    }
+  }
+}

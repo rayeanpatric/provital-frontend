@@ -1,0 +1,26 @@
+@use "../../styles/variables" as *;
+
+.gradient-bar {
+  position: absolute;
+  width: 110%;
+  height: 21px;
+  left: -20%;
+  top: 45%;
+  background: linear-gradient(90deg, #ffd700 0%, #ffb347 50%, #ff6b6b 100%);
+  transform: rotate(-3deg);
+  z-index: 0;
+  opacity: 0.85;
+  border-radius: 100px;
+  pointer-events: none; // Ensure it doesn't interfere with clicks
+
+  @include md {
+    width: 130%;
+    left: -30%;
+    top: 42%;
+  }
+
+  @include sm {
+    height: 16px;
+    top: 40%;
+  }
+}

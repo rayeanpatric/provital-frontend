@@ -1,0 +1,75 @@
+// Colors
+$primary-color: #0099cc;
+$secondary-color: #4caf50;
+$text-color: #333333;
+$text-primary: #333333;
+$text-secondary: #666666;
+$text-placeholder: #999999;
+$background-color: transparent;
+$background-light: transparent;
+$border-color: #e0e0e0;
+
+// Typography
+$font-family-primary: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+  Roboto, sans-serif;
+$font-size-base: 16px;
+$font-size-h1: 2.5rem;
+$font-size-h2: 2rem;
+$font-size-h3: 1.75rem;
+$line-height-base: 1.5;
+
+// Spacing
+$spacing-xs: 0.25rem;
+$spacing-sm: 0.5rem;
+$spacing-md: 1rem;
+$spacing-lg: 1.5rem;
+$spacing-xl: 2rem;
+
+// Breakpoints
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+// Border radius
+$border-radius-sm: 4px;
+$border-radius-md: 8px;
+$border-radius-lg: 12px;
+
+// Shadows
+$box-shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+$box-shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+$box-shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.1);
+
+// Container
+$container-max-width: 1200px;
+$container-padding: $spacing-md;
+
+// Responsive mixins
+@mixin sm {
+  @media (min-width: $breakpoint-sm) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (min-width: $breakpoint-md) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (min-width: $breakpoint-lg) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media (min-width: $breakpoint-xl) {
+    @content;
+  }
+}
+
+// Animation
+$transition-base: all 0.3s ease;
+$transition-slow: all 0.5s ease;

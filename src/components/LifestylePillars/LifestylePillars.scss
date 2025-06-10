@@ -1,0 +1,87 @@
+@use "../../styles/variables" as *;
+
+.lifestyle-pillars {
+  padding: 64px 0;
+  background: transparent;
+
+  &__header {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.2;
+
+    .text-primary {
+      color: $text-color;
+    }
+
+    .text-secondary {
+      color: $primary-color;
+    }
+  }
+
+  &__navigation {
+    display: flex;
+    gap: $spacing-md;
+  }
+  &__nav-button {
+    width: 40px;
+    height: 40px;
+    border: 1px solid $border-color;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.8);
+    color: $text-color;
+    cursor: pointer;
+    transition: $transition-base;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      background: $primary-color;
+      color: white;
+      border-color: $primary-color;
+    }
+  }
+
+  &__pills {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-start;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+    padding: 0 32px;
+    max-width: 1440px;
+    margin: 0 auto 32px;
+  }
+
+  &__pill {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 100px;
+    background: #f1f5f9;
+    color: $text-secondary;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: 500;
+    font-size: 14px;
+
+    &:hover {
+      background: #e2e8f0;
+    }
+
+    &.active {
+      background: #000000;
+      color: white;
+    }
+  }
+}
