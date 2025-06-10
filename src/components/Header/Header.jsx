@@ -50,40 +50,40 @@ const Header = () => {
             <li>
               <a href="/doctors">Doctors</a>
             </li>
+            <span className="nav-separator">|</span>
+            {/* Desktop Auth */}
+            <div className="header__auth desktop">
+              <button
+                className="btn-login"
+                onClick={toggleDropdown}
+                aria-expanded={isDropdownOpen}
+              >
+                Login / Signup{" "}
+                <span className="dropdown-arrow" aria-hidden="true">
+                  ▼
+                </span>
+              </button>
+              {isDropdownOpen && (
+                <div className="header__dropdown">
+                  <div className="dropdown-row">
+                    <span className="user-type">Doctor</span>
+                    <div className="dropdown-links">
+                      <a href="/doctor/login">Login</a>
+                      <a href="/doctor/signup">Sign up</a>
+                    </div>
+                  </div>
+                  <div className="dropdown-row">
+                    <span className="user-type">Patient</span>
+                    <div className="dropdown-links">
+                      <a href="/patient/login">Login</a>
+                      <a href="/patient/signup">Sign up</a>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
           </ul>
         </nav>
-
-        {/* Desktop Auth */}
-        <div className="header__auth desktop">
-          <button
-            className="btn-login"
-            onClick={toggleDropdown}
-            aria-expanded={isDropdownOpen}
-          >
-            Login / Signup{" "}
-            <span className="dropdown-arrow" aria-hidden="true">
-              ▼
-            </span>
-          </button>
-          {isDropdownOpen && (
-            <div className="header__dropdown">
-              <div className="dropdown-row">
-                <span className="user-type">Doctor</span>
-                <div className="dropdown-links">
-                  <a href="/doctor/login">Login</a>
-                  <a href="/doctor/signup">Sign up</a>
-                </div>
-              </div>
-              <div className="dropdown-row">
-                <span className="user-type">Patient</span>
-                <div className="dropdown-links">
-                  <a href="/patient/login">Login</a>
-                  <a href="/patient/signup">Sign up</a>
-                </div>
-              </div>
-            </div>
-          )}
-        </div>
 
         {/* Mobile Menu Button */}
         <button

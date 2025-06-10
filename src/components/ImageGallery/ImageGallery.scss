@@ -3,34 +3,72 @@
 .image-gallery {
   max-width: 1440px;
   margin: 0 auto;
-  overflow: hidden;
-  padding: 0 32px;
   position: relative;
   background: transparent;
-  &__container {
-    display: flex;
-    gap: 24px;
-    width: 100%;
-    will-change: transform;
-    padding: 20px 0;
-    background: transparent;
-    transition: transform 45s cubic-bezier(0.5, 0, 0.1, 1);
-  }
 
-  &__item {
-    flex: 0 0 calc((100% - 48px) / 3);
-    min-width: 0;
-    opacity: 1;
-    transition: all 0.6s ease-in-out;
+  // Desktop styles
+  @media (min-width: 1025px) {
+    overflow: hidden;
+    padding: 0 32px;
 
-    &.entering {
-      opacity: 0;
-      transform: translateX(100%);
+    &__container {
+      display: flex;
+      gap: 24px;
+      width: 100%;
+      padding: 20px 0;
+      background: transparent;
+      cursor: grab;
+      user-select: none;
+      scroll-behavior: smooth;
+      overflow-x: auto;
+      overflow-y: hidden;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      &::-webkit-scrollbar {
+        display: none;
+      }
     }
 
-    &.exiting {
-      opacity: 0;
-      transform: translateX(-100%);
+    &__item {
+      flex: 0 0 calc((100% - 48px) / 3);
+      min-width: 0;
+      padding: 0 12px;
+    }
+  }
+
+  // Mobile and Tablet styles
+  @media (max-width: 1024px) {
+    padding: 0;
+    overflow-x: hidden;
+
+    &__container {
+      display: flex;
+      width: 100%;
+      padding: 20px 0;
+      scroll-behavior: auto;
+      -webkit-overflow-scrolling: touch;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      transition: transform 0.3s ease-out;
+      cursor: grab;
+      touch-action: pan-x;
+      user-select: none;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      &:active {
+        cursor: grabbing;
+      }
+    }
+
+    &__item {
+      flex: 0 0 90vw;
+      min-width: 0;
+      padding: 0 5vw;
+      scroll-snap-align: center;
     }
   }
 }

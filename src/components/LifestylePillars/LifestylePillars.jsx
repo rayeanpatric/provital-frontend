@@ -104,7 +104,12 @@ const LifestylePillars = () => {
     <section className="lifestyle-pillars">
       <div className="lifestyle-pillars__header">
         <h2 className="lifestyle-pillars__title">
-          <span className="text-primary">Lifestyle as medicine:</span>{" "}
+          <span style={{ color: "#666666", display: "block", fontSize: "0.5em", marginBottom: "0.5rem", fontWeight: "normal" }}>
+            HOW IT WORKS
+          </span>
+          <span className="text-primary">
+            <i>Lifestyle as medicine:</i>
+          </span>{" "}
           <span className="text-secondary">The six pillars</span>
         </h2>
         <div className="lifestyle-pillars__navigation">
@@ -113,14 +118,14 @@ const LifestylePillars = () => {
             onClick={() => handleNavClick("prev")}
             aria-label="Previous pillar"
           >
-            ←
+            <b>←</b>
           </button>
           <button
             className="lifestyle-pillars__nav-button"
             onClick={() => handleNavClick("next")}
             aria-label="Next pillar"
           >
-            →
+            <b>→</b>
           </button>
         </div>
       </div>

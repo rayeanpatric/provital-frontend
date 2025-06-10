@@ -12,6 +12,11 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 40px;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      text-align: center;
+    }
   }
 
   &__title {
@@ -21,11 +26,14 @@
     line-height: 1.2;
 
     .text-primary {
-      color: $text-color;
+      background: linear-gradient(60deg, #fd646c 10%, #f7ad46 50%, #f1d63d 90%);
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     .text-secondary {
-      color: $primary-color;
+      color: $text-primary;
+      font-weight: lighter;
     }
   }
 
@@ -39,12 +47,13 @@
     border: 1px solid $border-color;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.8);
-    color: $text-color;
+    color: rgb(0, 0, 0);
     cursor: pointer;
     transition: $transition-base;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-weight: bolder;
 
     &:hover {
       background: $primary-color;
@@ -69,7 +78,7 @@
     border: none;
     border-radius: 100px;
     background: #f1f5f9;
-    color: $text-secondary;
+    color: linear-gradient(90deg, #ffd700 0%, #ffb347 50%, #ff7b82 100%);
     cursor: pointer;
     transition: all 0.2s ease;
     font-weight: 500;
@@ -84,8 +93,29 @@
       color: white;
     }
   }
-
   @media (max-width: 768px) {
     padding: 24px 0;
+
+    &__navigation,
+    &__pills {
+      display: none;
+    }
+
+    &__title {
+      text-align: center;
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    &__navigation,
+    &__pills {
+      display: none;
+    }
+
+    &__title {
+      text-align: center;
+      width: 100%;
+    }
   }
 }

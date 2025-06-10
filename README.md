@@ -1,70 +1,132 @@
-# Getting Started with Create React App
+# ProVital Healthcare Platform
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
+ProVital is a modern healthcare platform connecting patients with medical professionals while offering comprehensive wellness resources. This frontend implementation showcases a responsive, user-friendly interface built with React and modern web technologies.
 
-## Available Scripts
+## 🚀 Features
 
-In the project directory, you can run:
+### For Patients
+- **Healthcare Professional Search**
+  - Find doctors by specialty and location
+  - View detailed professional profiles
+  - Easy appointment booking system
 
-### `npm start`
+### For Healthcare Providers
+- **Professional Profile Management**
+  - Custom practice listing
+  - Appointment management
+  - Professional credentials display
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Core Components
+- Responsive header with authentication
+- Interactive service carousels
+- Medical facility showcase
+- Educational health resources
+- Mobile-optimized navigation
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠 Technical Stack
 
-### `npm test`
+- **Frontend Framework:** React 18+
+- **Styling:** SCSS/Sass with BEM methodology
+- **State Management:** React Hooks
+- **Build Tool:** Create React App
+- **Package Manager:** npm
+- **Version Control:** Git
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 📁 Project Structure
+```
+src/
+├── components/
+│   ├── Header/          # Navigation & auth components
+│   ├── Carousels/       # Interactive carousel components
+│   ├── Auth/            # Authentication related components
+│   └── Common/          # Reusable UI components
+├── styles/
+│   ├── variables.scss   # Global SCSS variables
+│   ├── mixins.scss     # SCSS mixins
+│   └── global.scss     # Global styles
+└── assets/
+    ├── images/         # Image assets
+    └── icons/          # Icon assets
+```
 
-### `npm run build`
+## 🚦 Getting Started
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Prerequisites
+- Node.js (v14.0.0 or higher)
+- npm (v6.0.0 or higher)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+# Clone repository
+git clone https://github.com/your-username/provital-frontend.git
 
-### `npm run eject`
+# Navigate to project directory
+cd provital-frontend
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# Install dependencies
+npm install
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Development Commands
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+# Start development server
+npm start
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# Build for production
+npm run build
 
-## Learn More
+# Run tests
+npm test
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🎨 Styling Guidelines
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- BEM methodology for CSS class naming
+- Mobile-first responsive design
+- Consistent color scheme and spacing
+- Accessibility compliance
 
-### Code Splitting
+## 🔧 Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Environment Variables
+```env
+REACT_APP_API_URL=your_api_url
+REACT_APP_ENV=development
+```
 
-### Analyzing the Bundle Size
+### Browser Support
+- Chrome (latest 2 versions)
+- Firefox (latest 2 versions)
+- Safari (latest 2 versions)
+- Edge (latest 2 versions)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 📱 Responsive Breakpoints
 
-### Making a Progressive Web App
+```scss
+$breakpoints: (
+  'mobile': 320px,
+  'tablet': 768px,
+  'desktop': 1024px,
+  'wide': 1440px
+);
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 🤝 Contributing
 
-### Advanced Configuration
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 📝 License
 
-### Deployment
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 👥 Contact
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Project Link: [https://github.com/rayeanpatric/provital-frontend](https://github.com/your-username/provital-frontend)
+- Deployed Link: [https://your-documentation-url.com](https://your-documentation-url.com)
