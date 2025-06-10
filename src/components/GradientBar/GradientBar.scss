@@ -12,23 +12,28 @@
   opacity: 1;
   border-radius: 100px;
   pointer-events: none;
+
   @media (max-width: 1024px) {
     z-index: 1;
+    width: 140%;
+    left: -20%;
+    height: 20px;
+    top: 46%;
+    transform: rotate(-9deg) scale(1.2);
   }
 
   @include md {
-    width: 160%;
-    left: -30%;
-    top: 75%; // Adjusted for medium screens
-    height: 80px;
-    transform: rotate(-4deg) scale(1.1);
+    height: 50px;
+    transform: rotate(-4deg) scale(1.2);
+    width: 140%;
+    left: -20%;
   }
 
   @include sm {
-    width: 180%;
-    left: -40%;
-    top: 70%; // Adjusted for small screens
-    height: 60px;
-    transform: rotate(-4deg);
+    top: 71%;
+    height: 50px;
+    transform: rotate(-4deg) scale(1.2);
+    width: 140%;
+    left: -20%;
   }
 }
