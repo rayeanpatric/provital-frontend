@@ -5,13 +5,17 @@
   width: 140%;
   height: 120px;
   left: -20%;
-  top: 80%; // Moved lower from 65% to 80%
+  top: 80%;
   background: linear-gradient(90deg, #ffd700 0%, #ffb347 50%, #ff7b82 100%);
-  transform: rotate(-4deg) scale(1.2); // Added scale for more presence
-  z-index: 3; // Increased from 1 to put it above carousel but below search (z-index: 5)
+  transform: rotate(-4deg) scale(1.2);
+  z-index: 2;
   opacity: 1;
   border-radius: 100px;
   pointer-events: none;
+
+  @media (max-width: 1024px) {
+    z-index: 50;
+  }
 
   @include md {
     width: 160%;

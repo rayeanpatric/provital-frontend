@@ -3,17 +3,15 @@
 .search-section {
   width: 100%;
   padding: 0 2rem;
-
   &__container {
     display: flex;
     align-items: stretch;
     gap: 1rem;
     background: white;
     padding: 0.75rem;
-    border-radius: 50px;
+    border-radius: 12px;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
   }
-
   &__input-group {
     flex: 1;
     position: relative;
@@ -21,7 +19,7 @@
     display: flex;
     align-items: center;
     background: #f8fafc;
-    border-radius: 25px;
+    border-radius: 8px;
     transition: all 0.2s ease;
 
     &:hover {
@@ -72,14 +70,13 @@
       outline: none;
     }
   }
-
   &__button {
     display: flex;
     align-items: center;
     gap: 0.5rem;
     padding: 0 2rem;
     border: none;
-    border-radius: 25px;
+    border-radius: 8px;
     background: linear-gradient(135deg, #34d399 0%, #3b82f6 100%);
     color: white;
     font-weight: 600;
