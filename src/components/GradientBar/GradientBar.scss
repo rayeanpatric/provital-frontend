@@ -2,25 +2,27 @@
 
 .gradient-bar {
   position: absolute;
-  width: 110%;
-  height: 21px;
+  width: 140%;
+  height: 120px;
   left: -20%;
-  top: 45%;
-  background: linear-gradient(90deg, #ffd700 0%, #ffb347 50%, #ff6b6b 100%);
-  transform: rotate(-3deg);
+  top: 65%;
+  background: linear-gradient(90deg, #ffd700 0%, #ffb347 50%, #ff7b82 100%);
+  transform: rotate(-4deg);
   z-index: 0;
   opacity: 0.85;
   border-radius: 100px;
-  pointer-events: none; // Ensure it doesn't interfere with clicks
 
   @include md {
-    width: 130%;
+    width: 160%;
     left: -30%;
-    top: 42%;
+    top: 60%;
+    height: 80px;
   }
 
   @include sm {
-    height: 16px;
-    top: 40%;
+    width: 180%;
+    left: -40%;
+    top: 55%;
+    height: 60px;
   }
 }

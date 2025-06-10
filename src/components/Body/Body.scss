@@ -3,136 +3,131 @@
 .body {
   width: 100%;
   position: relative;
-  background-color: transparent;
+  background-color: white;
+}
+
+.hero-section {
   min-height: 100vh;
   padding-top: 72px;
-  overflow-x: hidden;
+  position: relative;
+  overflow: hidden;
+}
 
-  &__content {
-    display: flex;
-    width: 100%;
-    max-width: 1440px;
-    margin: 0 auto;
-    position: relative;
-    min-height: calc(100vh - 72px);
-    padding: 2rem;
+.body__content {
+  display: flex;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 2rem;
+  gap: 4rem;
+  position: relative;
+  z-index: 1;
+  min-height: calc(100vh - 72px);
+}
+
+.body__carousels {
+  width: 45%;
+  display: flex;
+  gap: 1rem;
+  padding-top: 4rem;
+}
+
+.body__carousel-container {
+  flex: 1;
+  height: 600px; // Fixed height
+  width: calc(50% - 0.5rem); // Half width minus half the gap
+  position: relative;
+  aspect-ratio: 2/3; // Maintain vertical rectangle aspect ratio
+}
+
+.body__main-content {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 2rem;
+}
+
+.body__hero {
+  margin-bottom: 3rem;
+}
+
+.body__title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  color: $text-primary;
+
+  &-highlight {
+    background: linear-gradient(135deg, #00b4d8, #0077be);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+.body__subtitle {
+  font-size: 1.25rem;
+  color: $text-secondary;
+  line-height: 1.6;
+}
+
+.lifestyle-section {
+  padding: 4rem 0;
+  background-color: #fafafa;
+}
+
+// Tablet and Mobile Styles
+@media (max-width: 1024px) {
+  .body__content {
+    padding: 1rem 2rem;
     gap: 2rem;
-    z-index: 1; // Ensure content is above gradient bar
   }
 
-  &__carousels {
-    width: 45%;
-    display: flex;
+  .body__carousels {
+    padding-top: 2rem;
+  }
+
+  .body__carousel-container {
+    height: 500px;
+  }
+
+  .body__title {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .body__content {
     flex-direction: column;
-    gap: 1.5rem;
-    z-index: 2;
-    position: relative;
-    min-height: 600px;
-    height: 600px;
-    justify-content: center;
+    text-align: center;
+    min-height: auto;
   }
 
-  &__carousel-container {
-    flex: 1;
-    min-height: 250px;
-    height: 48%;
-    position: relative;
-    overflow: hidden;
-    background-color: #fff;
-    border-radius: 20px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-    margin-bottom: 1rem;
+  .body__carousels {
+    display: none;
   }
 
-  &__main-content {
-    width: 55%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-    z-index: 2; // Ensure text content is above carousels
+  .body__main-content {
+    width: 100%;
+    align-items: center;
+    padding-top: 3rem;
   }
 
-  &__hero {
-    margin-bottom: 3rem;
-    position: relative;
-  }
-
-  &__title {
-    font-size: 3.5rem;
-    font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: 1.5rem;
-    color: $text-primary;
-    position: relative;
-
-    &-highlight {
-      color: $primary-color;
-      position: relative;
-    }
-  }
-
-  &__subtitle {
-    font-size: 1.25rem;
-    color: $text-secondary;
-    line-height: 1.6;
+  .body__hero {
     margin-bottom: 2rem;
-    position: relative;
   }
 
-  .image-gallery {
-    margin-top: 4rem;
-    padding: 2rem 0;
-    position: relative;
-    z-index: 1;
+  .body__title {
+    font-size: 2.5rem;
   }
 
-  @include md {
-    &__content {
-      flex-direction: column;
-      padding: 1rem;
-    }
-
-    &__carousels {
-      width: 100%;
-      min-height: 400px;
-      height: 400px;
-      flex-direction: row;
-    }
-
-    &__carousel-container {
-      height: 100%;
-      min-height: 180px;
-    }
-
-    &__main-content {
-      width: 100%;
-      text-align: center;
-    }
-
-    &__title {
-      font-size: 2.5rem;
-    }
-
-    .image-gallery {
-      margin-top: 2rem;
-    }
+  .body__subtitle {
+    font-size: 1.125rem;
   }
 
-  @include sm {
-    &__carousels {
-      flex-direction: column;
-      min-height: 300px;
-      height: 300px;
-    }
-
-    &__carousel-container {
-      height: 48%;
-      min-height: 120px;
-    }
-
-    &__title {
-      font-size: 2rem;
-    }
+  .lifestyle-section {
+    padding: 3rem 0;
   }
 }

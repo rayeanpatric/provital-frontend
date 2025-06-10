@@ -7,7 +7,6 @@ const VerticalCarousel = ({ images = [], direction = "down" }) => {
     return null;
   }
 
-  // Triple the images for smooth infinite scroll
   const duplicatedImages = [...images, ...images, ...images];
 
   return (
