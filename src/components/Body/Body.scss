@@ -3,4 +3,11 @@
 .lifestyle-section {
   padding: 4rem 0;
   background-color: #fafafa;
+  position: relative;
+  z-index: 1;
+  margin-top: 2rem;
+
+  @media (max-width: 1024px) {
+    margin-top: 4rem;
+  }
 }

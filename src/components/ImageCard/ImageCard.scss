@@ -3,7 +3,7 @@
 .image-card {
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
   transition: all 0.3s ease;
   background: white;
   height: 100%;
@@ -41,7 +41,7 @@
     align-items: center;
     gap: 4px;
     backdrop-filter: blur(4px);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 8px rgba(218, 97, 97, 0.7);
     font-family: inherit;
     font-weight: 500;
     line-height: 1;

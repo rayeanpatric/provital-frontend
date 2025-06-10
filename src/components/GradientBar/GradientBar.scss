@@ -8,13 +8,12 @@
   top: 80%;
   background: linear-gradient(90deg, #ffd700 0%, #ffb347 50%, #ff7b82 100%);
   transform: rotate(-4deg) scale(1.2);
-  z-index: 2;
+  z-index: 1;
   opacity: 1;
   border-radius: 100px;
   pointer-events: none;
-
   @media (max-width: 1024px) {
-    z-index: 50;
+    z-index: 1;
   }
 
   @include md {
