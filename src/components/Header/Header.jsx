@@ -1,55 +1,161 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Header.scss";
 import logo from "../images/logo.png";
 
 const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+    if (isDropdownOpen) setIsDropdownOpen(false);
+  };
+
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+    if (isMenuOpen) setIsMenuOpen(false);
+  };
+
   return (
     <header className="header">
       <div className="header__container">
         <div className="header__logo">
           <img src={logo} alt="ProVital Logo" />
+          <span className="header__logo-text">ProVital</span>
         </div>
-        <nav className="header__nav" aria-label="Main navigation">
+
+        {/* Desktop Navigation */}
+        <nav className="header__nav desktop" aria-label="Main navigation">
           <ul>
             <li>
-              <a href="/list-practice" aria-label="List your medical practice">
-                List your practice
-              </a>
+              <a href="/list-practice">List your practice</a>
             </li>
+            <span className="nav-separator">|</span>
             <li>
-              <a href="/for-employers" aria-label="Information for employers">
-                For Employers
-              </a>
+              <a href="/for-employers">For Employers</a>
             </li>
+            <span className="nav-separator">|</span>
             <li>
-              <a href="/courses" aria-label="Browse medical courses">
-                Courses
-              </a>
+              <a href="/courses">Courses</a>
             </li>
+            <span className="nav-separator">|</span>
             <li>
-              <a href="/books" aria-label="Browse medical books">
-                Books
-              </a>
+              <a href="/books">Books</a>
             </li>
+            <span className="nav-separator">|</span>
             <li>
-              <a href="/speakers" aria-label="Find medical speakers">
-                Speakers
-              </a>
+              <a href="/speakers">Speakers</a>
             </li>
+            <span className="nav-separator">|</span>
             <li>
-              <a href="/doctors" aria-label="Find doctors">
-                Doctors
-              </a>
+              <a href="/doctors">Doctors</a>
             </li>
           </ul>
         </nav>
-        <div className="header__auth">
-          <button className="btn-login" aria-label="Log in to your account">
-            Login
+
+        {/* Desktop Auth */}
+        <div className="header__auth desktop">
+          <button
+            className="btn-login"
+            onClick={toggleDropdown}
+            aria-expanded={isDropdownOpen}
+          >
+            Login / Signup{" "}
+            <span className="dropdown-arrow" aria-hidden="true">
+              ▼
+            </span>
           </button>
-          <button className="btn-signup" aria-label="Create a new account">
-            Sign up
-          </button>
+          {isDropdownOpen && (
+            <div className="header__dropdown">
+              <div className="dropdown-row">
+                <span className="user-type">Doctor</span>
+                <div className="dropdown-links">
+                  <a href="/doctor/login">Login</a>
+                  <a href="/doctor/signup">Sign up</a>
+                </div>
+              </div>
+              <div className="dropdown-row">
+                <span className="user-type">Patient</span>
+                <div className="dropdown-links">
+                  <a href="/patient/login">Login</a>
+                  <a href="/patient/signup">Sign up</a>
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
+
+        {/* Mobile Menu Button */}
+        <button
+          className={`header__menu-btn ${isMenuOpen ? "open" : ""}`}
+          onClick={toggleMenu}
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          aria-expanded={isMenuOpen}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        {/* Mobile Menu */}
+        <div className={`header__mobile-menu ${isMenuOpen ? "open" : ""}`}>
+          {" "}
+          <div className="mobile-menu__auth">
+            <div className="auth-row">
+              <span className="user-type">Doctor</span>
+              <div className="auth-links">
+                <a href="/doctor/login">Login</a>
+                <a href="/doctor/signup">Sign up</a>
+              </div>
+            </div>
+            <div className="auth-row">
+              <span className="user-type">Patient</span>
+              <div className="auth-links">
+                <a href="/patient/login">Login</a>
+                <a href="/patient/signup">Sign up</a>
+              </div>
+            </div>
+          </div>
+          <nav className="mobile-menu__nav">
+            <ul>
+              <li>
+                <a href="/doctors">
+                  Doctors
+                  <span className="arrow">→</span>
+                </a>
+              </li>
+              <li>
+                <a href="/list-practice">
+                  List your practice
+                  <span className="arrow">→</span>
+                </a>
+              </li>
+              <li>
+                <a href="/for-employers">
+                  For Employers
+                  <span className="arrow">→</span>
+                </a>
+              </li>
+              <li>
+                <a href="/courses">
+                  Courses
+                  <span className="arrow">→</span>
+                </a>
+              </li>
+              <li>
+                <a href="/books">
+                  Books
+                  <span className="arrow">→</span>
+                </a>
+              </li>
+              <li>
+                <a href="/speakers">
+                  Speakers
+                  <span className="arrow">→</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
         </div>
       </div>
     </header>
