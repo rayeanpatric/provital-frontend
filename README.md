@@ -105,13 +105,6 @@ npm test
 
 ## 🔧 Configuration
 
-### Environment Variables
-
-```env
-REACT_APP_API_URL=your_api_url
-REACT_APP_ENV=development
-```
-
 ### Browser Support
 
 - Chrome (latest 2 versions)
