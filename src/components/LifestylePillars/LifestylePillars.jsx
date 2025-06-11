@@ -33,28 +33,28 @@ const LifestylePillars = () => {
       image: restorativeSleepImg,
       title: "Restorative sleep",
       description:
-        "Consistent, quality sleep is essential for optimal health, immune function and physical well-being.",
+        "Consistent, quality sleep is essential for cognitive function and physical health.",
       duration: "8 hours",
     },
     {
       image: stressManagementImg,
       title: "Stress management",
       description:
-        "Managing stress through mindfulness and relaxation techniques improves overall health outcomes.",
+        "Effective stress management techniques are crucial for mental well-being and overall health.",
       duration: "15 minutes",
     },
     {
       image: socialConnectionImg,
       title: "Social connection",
       description:
-        "Strong social relationships contribute to better health and longer life expectancy.",
+        "Strong social connections are associated with a lower risk of many chronic diseases and enhanced mental health.",
       duration: "1 hour",
     },
     {
       image: substanceAbuseImg,
       title: "Substance abuse",
       description:
-        "Avoiding harmful substances is crucial for maintaining long-term health and wellness.",
+        "Avoiding tobacco, limiting alcohol use, and abstaining from harmful substances are vital for long-term health.",
       duration: "45 minutes",
     },
   ];
@@ -72,7 +72,7 @@ const LifestylePillars = () => {
   const handlePillarClick = (index) => {
     setActiveIndex(index);
     setIsPaused(true);
-    
+
     setTimeout(() => setIsPaused(false), 10000);
   };
 
@@ -102,7 +102,15 @@ const LifestylePillars = () => {
     <section className="lifestyle-pillars">
       <div className="lifestyle-pillars__header">
         <h2 className="lifestyle-pillars__title">
-          <span style={{ color: "#666666", display: "block", fontSize: "0.5em", marginBottom: "0.5rem", fontWeight: "normal" }}>
+          <span
+            style={{
+              color: "#666666",
+              display: "block",
+              fontSize: "0.5em",
+              marginBottom: "0.5rem",
+              fontWeight: "normal",
+            }}
+          >
             HOW IT WORKS
           </span>
           <span className="text-primary">

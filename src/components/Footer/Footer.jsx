@@ -69,28 +69,28 @@ const Footer = () => {
           <h4>Connect</h4>
           <div className="footer__social">
             <a
-              href="https://facebook.com/provital"
+              href="/provital"
               className="footer__social-link"
               aria-label="Visit ProVital on Facebook"
             >
               Facebook
             </a>
             <a
-              href="https://twitter.com/provital"
+              href="/provital"
               className="footer__social-link"
               aria-label="Follow ProVital on Twitter"
             >
               Twitter
             </a>
             <a
-              href="https://linkedin.com/company/provital"
+              href="/provital"
               className="footer__social-link"
               aria-label="Connect with ProVital on LinkedIn"
             >
               LinkedIn
             </a>
             <a
-              href="https://instagram.com/provital"
+              href="/provital"
               className="footer__social-link"
               aria-label="Follow ProVital on Instagram"
             >
