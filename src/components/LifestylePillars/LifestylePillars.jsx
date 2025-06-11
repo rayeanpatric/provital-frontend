@@ -72,7 +72,7 @@ const LifestylePillars = () => {
   const handlePillarClick = (index) => {
     setActiveIndex(index);
     setIsPaused(true);
-    // Resume auto-rotation after 10 seconds of user interaction
+    
     setTimeout(() => setIsPaused(false), 10000);
   };
 
@@ -86,11 +86,9 @@ const LifestylePillars = () => {
     setTimeout(() => setIsPaused(false), 10000);
   };
 
-  // Calculate the true modulo (handles negative numbers correctly)
   const mod = (n, m) => ((n % m) + m) % m;
   const displayIndex = mod(activeIndex, pillars.length);
 
-  // Create a window of items for smooth infinite scroll
   const getVisibleItems = () => {
     const items = [];
     for (let i = -1; i <= pillars.length; i++) {
@@ -108,8 +106,8 @@ const LifestylePillars = () => {
             HOW IT WORKS
           </span>
           <span className="text-primary">
-            <i>Lifestyle as medicine:</i>
-          </span>{" "}
+            <i>Lifestyle as medicine: </i>
+          </span>
           <span className="text-secondary">The six pillars</span>
         </h2>
         <div className="lifestyle-pillars__navigation">
