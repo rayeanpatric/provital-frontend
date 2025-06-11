@@ -7,8 +7,9 @@ import {
   MoonIcon,
   StressHeartIcon,
   SocialHeartIcon,
-  ClockIcon
+  ClockIcon,
 } from "../GradientIcons/GradientIcons";
+import { HiArrowRight, HiArrowLeft } from "react-icons/hi";
 
 // Import images
 import nutritionImg from "../images/nutrition.jpg";
@@ -26,40 +27,73 @@ const LifestylePillars = () => {
       image: nutritionImg,
       title: "Nutrition",
       description:
-        "Evidence supports the use of a whole food, plant-predominant diet to prevent, treat and reverse chronic illness.",      duration: <div className="duration-wrapper"><HeartEcgIcon /><span>121/80 mmHg</span></div>,
+        "Evidence supports the use of a whole food, plant-predominant diet to prevent, treat and reverse chronic illness.",
+      duration: (
+        <div className="duration-wrapper">
+          <HeartEcgIcon />
+          <span>121/80 mmHg</span>
+        </div>
+      ),
     },
     {
       image: physicalActivityImg,
       title: "Physical activity",
       description:
         "Regular physical activity is key to managing weight, improving mental health, and reducing risk of chronic disease.",
-      duration: <div className="duration-wrapper"><GradientHeartIcon /><span>32 minutes</span></div>,
+      duration: (
+        <div className="duration-wrapper">
+          <GradientHeartIcon />
+          <span>32 minutes</span>
+        </div>
+      ),
     },
     {
       image: restorativeSleepImg,
       title: "Restorative sleep",
       description:
-        "Consistent, quality sleep is essential for cognitive function and physical health.",      duration: <div className="duration-wrapper"><MoonIcon /><span>8 hours</span></div>,
+        "Consistent, quality sleep is essential for cognitive function and physical health.",
+      duration: (
+        <div className="duration-wrapper">
+          <MoonIcon />
+          <span>8 hours</span>
+        </div>
+      ),
     },
     {
       image: stressManagementImg,
       title: "Stress management",
       description:
         "Effective stress management techniques are crucial for mental well-being and overall health.",
-      duration: <div className="duration-wrapper"><StressHeartIcon /><span>15 minutes</span></div>,
+      duration: (
+        <div className="duration-wrapper">
+          <StressHeartIcon />
+          <span>15 minutes</span>
+        </div>
+      ),
     },
     {
       image: socialConnectionImg,
       title: "Social connection",
       description:
-        "Strong social connections are associated with a lower risk of many chronic diseases and enhanced mental health.",      duration: <div className="duration-wrapper"><SocialHeartIcon /><span>1 hour</span></div>,
+        "Strong social connections are associated with a lower risk of many chronic diseases and enhanced mental health.",
+      duration: (
+        <div className="duration-wrapper">
+          <SocialHeartIcon />
+          <span>1 hour</span>
+        </div>
+      ),
     },
     {
       image: substanceAbuseImg,
       title: "Substance abuse",
       description:
         "Avoiding tobacco, limiting alcohol use, and abstaining from harmful substances are vital for long-term health.",
-      duration: <div className="duration-wrapper"><ClockIcon /><span>45 minutes</span></div>,
+      duration: (
+        <div className="duration-wrapper">
+          <ClockIcon />
+          <span>45 minutes</span>
+        </div>
+      ),
     },
   ];
 
@@ -128,14 +162,10 @@ const LifestylePillars = () => {
             onClick={() => handleNavClick("prev")}
             aria-label="Previous pillar"
           >
-            <b>←</b>
+            <HiArrowLeft />
           </button>
-          <button
-            className="lifestyle-pillars__nav-button"
-            onClick={() => handleNavClick("next")}
-            aria-label="Next pillar"
-          >
-            <b>→</b>
+          <button className="lifestyle-pillars__nav-button">
+            <HiArrowRight />
           </button>
         </div>
       </div>

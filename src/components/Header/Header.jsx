@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { HiArrowRight } from "react-icons/hi";
 import "./Header.scss";
 import logo from "../images/logo.png";
 
@@ -121,37 +122,37 @@ const Header = () => {
               <li>
                 <a href="/doctors">
                   Doctors
-                  <span className="arrow">→</span>
+                  <HiArrowRight className="arrow" />
                 </a>
               </li>
               <li>
                 <a href="/list-practice">
                   List your practice
-                  <span className="arrow">→</span>
+                  <HiArrowRight className="arrow" />
                 </a>
               </li>
               <li>
                 <a href="/for-employers">
                   For Employers
-                  <span className="arrow">→</span>
+                  <HiArrowRight className="arrow" />
                 </a>
               </li>
               <li>
                 <a href="/courses">
                   Courses
-                  <span className="arrow">→</span>
+                  <HiArrowRight className="arrow" />
                 </a>
               </li>
               <li>
                 <a href="/books">
                   Books
-                  <span className="arrow">→</span>
+                  <HiArrowRight className="arrow" />
                 </a>
               </li>
               <li>
                 <a href="/speakers">
                   Speakers
-                  <span className="arrow">→</span>
+                  <HiArrowRight className="arrow" />
                 </a>
               </li>
             </ul>

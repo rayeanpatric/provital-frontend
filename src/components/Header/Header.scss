@@ -174,7 +174,7 @@
       display: block;
       width: 100%;
       height: 2px;
-      background-color: $primary-color;
+      background-color: #000000;
       transition: transform 0.3s ease;
     }
 
@@ -182,12 +182,14 @@
       span {
         &:first-child {
           transform: translateY(9px) rotate(45deg);
+          background-color: #000000;
         }
         &:nth-child(2) {
           opacity: 0;
         }
         &:last-child {
           transform: translateY(-9px) rotate(-45deg);
+          background-color: #000000;
         }
       }
     }
@@ -217,7 +219,7 @@
       padding: $spacing-md;
       background-color: white;
       border-radius: 12px;
-      border: 1px solid rgba(0, 0, 0, 0.2);
+      border: 1px solid #707070;
       overflow: hidden;
 
       .auth-row {
@@ -233,7 +235,7 @@
         }
 
         &:not(:last-child) {
-          border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+          border-bottom: 1px solid #707070;
         }
 
         .user-type {
@@ -270,6 +272,8 @@
 
         li {
           margin-bottom: $spacing-md;
+          border-bottom: 1px solid #707070;
+          padding-bottom: $spacing-md;
 
           a {
             display: flex;
@@ -282,12 +286,16 @@
             font-weight: 500;
 
             .arrow {
-              color: $primary-color;
-              font-weight: bold;
+              color: #707070;
+              font-size: 1.2rem;
             }
 
             &:hover {
               color: $primary-color;
+
+              .arrow {
+                color: $primary-color;
+              }
             }
           }
         }
