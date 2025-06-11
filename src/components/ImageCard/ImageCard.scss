@@ -28,34 +28,33 @@
     object-fit: cover;
     object-position: center;
   }
-
   &__duration {
     position: absolute;
     bottom: 16px;
     left: 16px;
-    background: #e5e5e5eb; 
+    background: #d7d4d4eb;
     padding: 8px 16px;
     border-radius: 100px;
     font-size: 15px;
-    display: flex;
-    align-items: center;
-    gap: 4px;
+    color: #000000;
     backdrop-filter: blur(4px);
-    box-shadow: 0 2px 8px rgba(218, 97, 97, 0.7);
-    font-family: inherit;
+    box-shadow: 0 2px 8px rgba(52, 52, 52, 0.7);
     font-weight: 500;
-    line-height: 1;
 
-    span:first-child {
-      color: #000000;
-      font-weight: 700;
-      font-size: 15px;
-      margin-right: 2px;
-    }
-    span:last-child {
-      color: #000000;
-      font-weight: 400;
-      font-size: 15px;
+    .duration-wrapper {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      line-height: 1;
+      height: 24px;
+
+      svg {
+        display: block;
+        width: 20px;
+        height: 20px;
+        flex-shrink: 0;
+        margin-top: -2px;
+      }
     }
   }
 

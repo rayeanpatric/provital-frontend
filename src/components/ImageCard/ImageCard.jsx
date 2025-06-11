@@ -11,13 +11,10 @@ const ImageCard = ({ image, title, description, duration }) => {
           alt={`${title} - ${description}`}
           className="image-card__image"
           loading="lazy"
-        />
+        />{" "}
         {duration && (
-          <div
-            className="image-card__duration"
-            aria-label={`Duration: ${duration}`}
-          >
-            <span>{duration}</span>
+          <div className="image-card__duration" aria-label="Duration">
+            <div className="duration-wrapper">{duration}</div>
           </div>
         )}
       </div>

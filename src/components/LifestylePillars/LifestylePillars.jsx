@@ -1,6 +1,14 @@
 import React, { useState, useEffect } from "react";
 import ImageGallery from "../ImageGallery/ImageGallery";
 import "./LifestylePillars.scss";
+import {
+  HeartEcgIcon,
+  GradientHeartIcon,
+  MoonIcon,
+  StressHeartIcon,
+  SocialHeartIcon,
+  ClockIcon
+} from "../GradientIcons/GradientIcons";
 
 // Import images
 import nutritionImg from "../images/nutrition.jpg";
@@ -13,49 +21,45 @@ import substanceAbuseImg from "../images/substance-abuse.jpg";
 const LifestylePillars = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
-
   const pillars = [
     {
       image: nutritionImg,
       title: "Nutrition",
       description:
-        "Evidence supports the use of a whole food, plant-predominant diet to prevent, treat and reverse chronic illness.",
-      duration: "121/80 mmHg",
+        "Evidence supports the use of a whole food, plant-predominant diet to prevent, treat and reverse chronic illness.",      duration: <div className="duration-wrapper"><HeartEcgIcon /><span>121/80 mmHg</span></div>,
     },
     {
       image: physicalActivityImg,
       title: "Physical activity",
       description:
         "Regular physical activity is key to managing weight, improving mental health, and reducing risk of chronic disease.",
-      duration: "32 minutes",
+      duration: <div className="duration-wrapper"><GradientHeartIcon /><span>32 minutes</span></div>,
     },
     {
       image: restorativeSleepImg,
       title: "Restorative sleep",
       description:
-        "Consistent, quality sleep is essential for cognitive function and physical health.",
-      duration: "8 hours",
+        "Consistent, quality sleep is essential for cognitive function and physical health.",      duration: <div className="duration-wrapper"><MoonIcon /><span>8 hours</span></div>,
     },
     {
       image: stressManagementImg,
       title: "Stress management",
       description:
         "Effective stress management techniques are crucial for mental well-being and overall health.",
-      duration: "15 minutes",
+      duration: <div className="duration-wrapper"><StressHeartIcon /><span>15 minutes</span></div>,
     },
     {
       image: socialConnectionImg,
       title: "Social connection",
       description:
-        "Strong social connections are associated with a lower risk of many chronic diseases and enhanced mental health.",
-      duration: "1 hour",
+        "Strong social connections are associated with a lower risk of many chronic diseases and enhanced mental health.",      duration: <div className="duration-wrapper"><SocialHeartIcon /><span>1 hour</span></div>,
     },
     {
       image: substanceAbuseImg,
       title: "Substance abuse",
       description:
         "Avoiding tobacco, limiting alcohol use, and abstaining from harmful substances are vital for long-term health.",
-      duration: "45 minutes",
+      duration: <div className="duration-wrapper"><ClockIcon /><span>45 minutes</span></div>,
     },
   ];
 
