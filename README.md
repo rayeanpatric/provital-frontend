@@ -137,4 +137,6 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## 👥 Contact
 
-- Project Link: [https://github.com/rayeanpatric/provital-frontend](https://github.com/your-username/provital-frontend)
+- Project Link: [https://github.com/rayeanpatric/provital-frontend](https://github.com/rayeanpatric/provital-frontend)
+
+***Made with ❤️ by [Rayean Patric](https://github.com/rayeanpatric)***
