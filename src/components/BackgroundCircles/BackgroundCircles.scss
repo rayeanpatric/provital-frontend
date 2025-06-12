@@ -25,20 +25,20 @@
     left: 20%;
     background: radial-gradient(
       circle at center,
-      rgba(255, 217, 0, 0.4),
+      rgba(255, 217, 0, 0.35),
       // More intense medium purple
       rgba(245, 240, 255, 0.1)
     );
   }
 
   &-2 {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     top: 30%;
     right: 5%;
     background: radial-gradient(
       circle at center,
-      rgba(138, 43, 226, 0.7),
+      rgba(138, 43, 226, 0.5),
       // More intense purple
       rgba(230, 230, 250, 0.2)
     );
