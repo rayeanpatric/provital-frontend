@@ -40,12 +40,12 @@
   }
   &__image-wrapper {
     width: 240px; // Approximately 341px scaled down
-    height: 360px; // Approximately 512px scaled down 
+    height: 360px; // Approximately 512px scaled down
     margin: 0 auto;
     border-radius: 20px; // Slightly reduced to match smaller size
     overflow: hidden;
     position: relative;
-    box-shadow: 0 8px 24px rgba(255, 220, 100, 0.4),
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.25),
       0 2px 8px rgba(255, 230, 150, 0.3), 0 0 40px rgba(255, 248, 200, 0.2);
     transform: translateZ(0);
 
