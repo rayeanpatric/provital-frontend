@@ -152,6 +152,6 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 ## 🔗 External Link
 
 - Project Link: [https://github.com/rayeanpatric/provital-frontend](https://github.com/rayeanpatric/provital-frontend)
-- Quick Demo: [Google Photos](https://photos.app.goo.gl/9kXi6WB9AoZ4JHJG6)
+- Quick Demo: [Google Drive](https://drive.google.com/file/d/1FeVvmdBAJXZCQiA4A477p0ltBjlUAPQ5/view?usp=sharing)
 
 ***Made with*** ❤️ ***by [Rayean Patric](https://github.com/rayeanpatric)***
