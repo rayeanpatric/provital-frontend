@@ -1,5 +1,19 @@
 # ProVital Healthcare Platform
 
+## ⚠️ **IMPORTANT DISPLAY COMPATIBILITY NOTICE** ⚠️
+
+### **🔴 CAUTION: DISPLAY SIZE LIMITATIONS**
+
+**This design was specifically optimized for a 15.6-inch laptop display with 16:9 aspect ratio. The site is fully responsive from mobile devices up to this screen size. For displays larger than 15.6-inch 16:9 ratio laptops, the UI might not be responsive or displayed as expected.**
+
+**Recommended viewing experience:**
+- ✅ **Mobile devices** (320px - 768px)
+- ✅ **Tablets** (768px - 1024px)  
+- ✅ **Laptops up to 15.6-inch 16:9** (up to ~1366x768 or 1920x1080)
+- ⚠️ **Larger displays** may experience layout issues
+
+---
+
 ## Overview
 
 ProVital is a modern healthcare platform connecting patients with medical professionals while offering comprehensive wellness resources. This frontend implementation showcases a responsive, user-friendly interface built with React and modern web technologies.
